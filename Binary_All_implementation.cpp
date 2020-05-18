@@ -81,7 +81,7 @@ int f() { // version (1) T T T T F F F <- find last index that has TRUE
 //   F  F  F  ?
 int f() { // version (2) F F T T T T <- find first index that has TRUE
 	// answer not defined for [F F F] so let N be the answer then
-	int left = 0, right = n; // search in interval [0, n]
+	int left = 0, right = n - 1 + 1; // search in interval [0, n]
 	while (left < right) {
 		int mid = left + (right - left) / 2; // _ _ _ _
 		// if(mid == n - 1 || a[mid] > a[mid+1]) { //property(mid)) {
